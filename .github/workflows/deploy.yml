@@ -31,8 +31,8 @@ jobs:
 
     - name: Deploy
       run: >
-        helm list -a /
-        kubectl get secrets /
+        helm list -a |
+        kubectl get secrets |
         helm upgrade 
         --install eshoplearn-coupon
         --namespace=default 
